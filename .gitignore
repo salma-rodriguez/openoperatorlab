@@ -1,0 +1,7 @@
+__pycache__/
+.ipynb_checkpoints/
+spectral_operator/__pycache__
+tests/__pycache__
+notebooks/__pycache__
+notebooks/
+*.pkl
