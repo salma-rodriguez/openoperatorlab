@@ -1,53 +1,33 @@
 """
-===========================================================================
-rh_operator.algebra
-===========================================================================
+spectral_operators.core.algebra
+===============================
 
-Core linear algebra abstractions for the rh_operator research library.
+Core finite-dimensional linear algebra abstractions for OperatorLab.
 
-This module defines immutable linear operators together with common
-matrix operations used throughout the package.
+This module defines immutable matrix-backed linear operators together
+with common matrix operations used throughout the spectral_operators
+subpackage.
 
-The module is intentionally independent of any specific mathematical
-application (Riemann Hypothesis, PDEs, Quantum Mechanics, etc.).
-
-Author
-------
-Salma Rodriguez
-
-Version
--------
-0.1.0
+The implementation is intentionally independent of any particular
+scientific application.
 """
 
 from __future__ import annotations
 
-from abc import ABC
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Any, Dict, Optional, Tuple
+from typing import Any, ClassVar
 
 import numpy as np
 
-
-# ===========================================================================
-# Exceptions
-# ===========================================================================
-
-class OperatorError(Exception):
-    """Base class for operator-related exceptions."""
-
-
-class DimensionMismatchError(OperatorError):
-    """Raised when incompatible operator dimensions are encountered."""
-
-
-class NonSquareOperatorError(OperatorError):
-    """Raised when a square matrix is required."""
-
-
-class SingularOperatorError(OperatorError):
-    """Raise when attempting to invert a singular operator."""
+from .base import OperatorBase
+from .exceptions import (
+    DimensionMismatchError,
+    NonSquareOperatorError,
+    OperatorError,
+    SingularOperatorError,
+)
+from .utilities import readonly_array
 
 
 # ===========================================================================
@@ -82,7 +62,7 @@ class Norm(Enum):
 # ===========================================================================
 
 @dataclass(frozen=True)
-class LinearOperator(ABC):
+class LinearOperator(OperatorBase):
     """
     Immutable matrix-backed linear operator.
 
@@ -110,26 +90,25 @@ class LinearOperator(ABC):
 
     def __post_init__(self):
 
-        M = np.asarray(self.matrix)
+        matrix = readonly_array(
+            self.matrix,
+            name="operator matrix",
+            ndim=2,
+        )
 
-        if M.ndim != 2:
-            raise OperatorError(
-                "Operator matrix must be two-dimensional."
-            )
+        object.__setattr__(self, "matrix", matrix)
 
-        object.__setattr__(self, "matrix", M)
-
-    _NORM_ALIASES = {
+    _NORM_ALIASES: ClassVar[dict[object, Norm]] = {
         Norm.FROBENIUS: Norm.FROBENIUS,
         "frobenius": Norm.FROBENIUS,
         "fro": Norm.FROBENIUS,
-    
+
         Norm.SPECTRAL: Norm.SPECTRAL,
         "spectral": Norm.SPECTRAL,
         "operator": Norm.SPECTRAL,
         2: Norm.SPECTRAL,
         "2": Norm.SPECTRAL,
-    
+
         Norm.NUCLEAR: Norm.NUCLEAR,
         "nuc": Norm.NUCLEAR,
         "nuclear": Norm.NUCLEAR,
@@ -142,7 +121,7 @@ class LinearOperator(ABC):
     # ------------------------------------------------------------------
 
     @property
-    def shape(self) -> Tuple[int, int]:
+    def shape(self) -> tuple[int, int]:
         """Matrix dimensions."""
         return self.matrix.shape
 

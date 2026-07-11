@@ -1,7 +1,7 @@
 import json
 import numpy as np
 
-from spectral_operators.algebra import LinearOperator
+from spectral_operators.core.algebra import LinearOperator
 from spectral_operators.io import (
     JSONSerializer,
     OperatorIO,

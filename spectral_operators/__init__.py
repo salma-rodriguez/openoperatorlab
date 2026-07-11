@@ -1,101 +1,30 @@
 """
-rh_operator
-===========
+Spectral operator constructions and analysis tools.
 
-Research library for operator-theoretic investigations of the
-Riemann Hypothesis and related spectral problems.
-
-This package provides reusable mathematical objects for
-constructing, composing, and analyzing linear operators,
-including finite-difference, weighted, graded, adelic,
-Hamiltonian, and spectral operators.
-
-The package is intentionally independent of any specific
-numerical experiment so that operators may be reused in
-different research contexts.
-
-Author:
-    Salma Rodriguez
-
-License:
-    Research / Development
-
+This package provides the public interface for OperatorLab's
+spectral-operator functionality.
 """
 
-__version__ = "0.1.0"
-
-__author__ = "Salma Rodriguez"
+from .core import (
+    DimensionMismatchError,
+    Field,
+    LinearOperator,
+    NonSquareOperatorError,
+    Norm,
+    OperatorBase,
+    OperatorError,
+    OperatorFactory,
+    SingularOperatorError,
+)
 
 __all__ = [
+    "DimensionMismatchError",
+    "Field",
     "LinearOperator",
+    "NonSquareOperatorError",
+    "Norm",
+    "OperatorBase",
+    "OperatorError",
     "OperatorFactory",
-
-    "FiniteDifferenceOperator",
-    "WeightOperator",
-    "GradedOperator",
-    "AdelicOperator",
-    "Hamiltonian",
-
-    "SpectralAnalyzer",
-    "GeometryAnalyzer",
-    "EvolutionOperator",
-
-    "ZetaCorrespondence",
+    "SingularOperatorError",
 ]
-
-# ---------------------------------------------------------------------
-# Algebra
-# ---------------------------------------------------------------------
-
-from .algebra import (
-    LinearOperator,
-    Field,
-    Norm,
-    OperatorFactory
-)
-
-"""
-# ---------------------------------------------------------------------
-# Operator Construction
-# ---------------------------------------------------------------------
-
-from .operators import (
-    FiniteDifferenceOperator,
-    WeightOperator,
-    GradedOperator,
-    AdelicOperator,
-    Hamiltonian,
-)
-
-# ---------------------------------------------------------------------
-# Spectral Theory
-# ---------------------------------------------------------------------
-
-from .spectrum import (
-    SpectralAnalyzer,
-)
-
-# ---------------------------------------------------------------------
-# Geometry
-# ---------------------------------------------------------------------
-
-from .geometry import (
-    GeometryAnalyzer,
-)
-
-# ---------------------------------------------------------------------
-# Time Evolution
-# ---------------------------------------------------------------------
-
-from .evolution import (
-    EvolutionOperator,
-)
-
-# ---------------------------------------------------------------------
-# Zeta Correspondence
-# ---------------------------------------------------------------------
-
-from .zeta import (
-    ZetaCorrespondence,
-)
-"""

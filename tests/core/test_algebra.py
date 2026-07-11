@@ -1,6 +1,6 @@
 import numpy as np
 
-from spectral_operators.algebra import LinearOperator, Norm, OperatorFactory
+from spectral_operators import LinearOperator, Norm, OperatorFactory
 
 
 def test_transpose():

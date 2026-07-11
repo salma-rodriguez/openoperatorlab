@@ -1,6 +1,6 @@
 import numpy as np
 
-from spectral_operators.algebra import LinearOperator
+from spectral_operators.core.algebra import LinearOperator
 from spectral_operators.zeta import ZetaZeroSet, ZetaCorrespondence
 from spectral_operators.visualization import (
     SpectrumData,

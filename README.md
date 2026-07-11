@@ -1,4 +1,4 @@
-# Operator Universe
+# OperatorLab
 
 *A modular Python framework for operator theory, numerical linear algebra, and scientific computing.*
 
@@ -6,11 +6,11 @@
 
 ## Overview
 
-**Spectral Unvierse** is an open-source Python library providing a modular framework for constructing, analyzing, and 
+**Spectral Universe** is an open-source Python library providing a modular framework for constructing, analyzing, and 
 experimenting with many types of operators. Currently the library includes a **Spectral Operators** subpackage. Future 
 operators are highlighted under **Future Directions**.
 
-**Spectral Operator** is a Python subpackage within the **Spectral Universe** library providing a modular framework for 
+**Spectral Operators** is a Python subpackage within the **Spectral Universe** library providing a modular framework for 
 constructing, analyzing, and experimenting with linear operators from a spectral perspective.
 
 Originally motivated by research into operator-theoretic approaches to the Riemann Hypothesis, the library has evolved 
@@ -154,9 +154,9 @@ Planned areas of development include:
 
 ## Long-Term Vision
 
-The Spectral Universe project is designed as a modular framework for operator-based scientific computing. While the 
-current release focuses on spectral operator theory, the architecture is intended to support additional operator 
-families, including:
+The OperatorLab project is designed as a modular framework for operator-based scientific computing. While the current 
+release focuses on spectral operator theory, the architecture is intended to support additional operator families, 
+among which are:
 
 - Spectral operators
 - Stochastic operators

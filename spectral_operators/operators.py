@@ -10,9 +10,24 @@ defined in algebra.py.
 
 from __future__ import annotations
 
+from collections.abc import Iterable, Sequence
+
 import numpy as np
 
-from .algebra import LinearOperator
+from .core.algebra import LinearOperator
+from .core.exceptions import (
+    DimensionMismatchError,
+    NonSquareOperatorError,
+    OperatorError,
+)
+from .core.utilities import (
+    as_one_dimensional_array,
+    as_two_dimensional_array,
+    normalize_l1,
+    require_positive_integer,
+    require_positive_real,
+    require_same_shape,
+)
 
 
 # ===========================================================================

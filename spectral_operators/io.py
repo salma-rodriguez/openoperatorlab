@@ -15,7 +15,7 @@ from pathlib import Path
 
 import numpy as np
 
-from .algebra import LinearOperator, OperatorError
+from .core.algebra import LinearOperator, OperatorError
 
 
 # ===========================================================================
