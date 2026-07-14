@@ -1,16 +1,17 @@
-# OperatorLab
+# Open OperatorLab
 
-*A modular Python framework for operator theory, numerical linear algebra, and scientific computing.*
+*A modular Python framework for operator theory, numerical linear algebra, and scientific computing, written with the
+vision of creating an ecosystem for operator theory.*
 
 ---
 
 ## Overview
 
-**Spectral Universe** is an open-source Python library providing a modular framework for constructing, analyzing, and 
+**OperatorLab** is an open-source Python library providing a modular framework for constructing, analyzing, and 
 experimenting with many types of operators. Currently the library includes a **Spectral Operators** subpackage. Future 
 operators are highlighted under **Future Directions**.
 
-**Spectral Operators** is a Python subpackage within the **Spectral Universe** library providing a modular framework for 
+**Spectral Operators** is a Python subpackage within the **OperatorLab** library, providing a modular framework for 
 constructing, analyzing, and experimenting with linear operators from a spectral perspective.
 
 Originally motivated by research into operator-theoretic approaches to the Riemann Hypothesis, the library has evolved 
