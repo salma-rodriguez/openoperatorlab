@@ -1,4 +1,4 @@
-# Open OperatorLab
+# Open-OperatorLab
 
 *A modular Python framework for operator theory, numerical linear algebra, and scientific computing, written with the
 vision of creating an ecosystem for operator theory.*
@@ -57,20 +57,40 @@ Current capabilities include:
 ## Package Structure
 
 ```
-spectral_operator/
-
-    algebra.py
-    operators.py
-    spectrum.py
-    geometry.py
-    weights.py
-    evolution.py
-    adelic.py
-    zeta.py
-    diagnostics.py
-    visualization.py
-    constants.py
-    io.py
+OpenOperatorLab / OperatorLab
+│
+├── operator_core/
+│   ├── __init__.py
+│   ├── base.py
+│   ├── exceptions.py
+│   ├── utilities.py
+│   └── algebra.py
+│
+├── spectral_operators/
+│   ├── __init__.py
+│   ├── core/                  # compatibility shims
+│   ├── operators.py
+│   ├── weights.py
+│   ├── spectrum.py
+│   ├── geometry.py
+│   ├── evolution.py
+│   ├── adelic.py
+│   ├── zeta.py
+│   ├── diagnostics.py
+│   ├── visualization.py
+│   ├── constants.py
+│   └── io.py
+│
+├── tests/
+│   ├── operator_core/
+│   └── spectral_operators/
+│
+├── docs/
+├── examples/
+├── README.md
+├── CHANGELOG.md
+├── LICENSE
+└── pyproject.toml
 ```
 
 ---
@@ -134,11 +154,14 @@ Documentation is being developed alongside the library and will include:
 Current release:
 
 ```
-v0.1.0
+v0.1.1
 ```
 
-This version establishes the foundational architecture of the project and provides the initial implementation of the 
+v0.1.0 version establishes the foundational architecture of the project and provides the initial implementation of the 
 core spectral operator framework.
+
+v0.1.1 performs some updates to the **core** library, including *shims* for compatibility with new layout (refer to 
+package structure above).
 
 ---
 
