@@ -3,29 +3,17 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "spectral-operators"
+name = "openoperatorlab"
 version = "0.1.1"
 description = "A modular Python framework for spectral operator theory, numerical linear algebra, and scientific computing."
 readme = "README.md"
 requires-python = ">=3.12"
 license = { file = "LICENSE" }
 
-username = "salma-rodriguez"
+# username = "salma-rodriguez"
 
 authors = [
     { name = "Salma Y. Rodriguez" }
-]
-
-keywords = [
-    "operator theory",
-    "spectral theory",
-    "linear algebra",
-    "linear operators",
-    "numerical analysis"
-    "numerical linear algebra",
-    "scientific computing",
-    "stochastic operators"
-    "riemann hypothesis"
 ]
 
 classifiers = [
@@ -37,18 +25,31 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "Topic :: Scientific/Engineering :: Mathematics",
     "Topic :: Scientific/Engineering :: Physics",
-    "Topic :: Software Development :: Libraries :: Python Modules"
+    "Topic :: Software Development :: Libraries :: Python Modules",
 ]
+
 dependencies = [
     "numpy",
-    "scipy"
+    "scipy",
+]
+
+keywords = [
+    "operator theory",
+    "spectral theory",
+    "linear algebra",
+    "linear operators",
+    "numerical analysis",
+    "numerical linear algebra",
+    "scientific computing",
+    "stochastic operators",
+    "riemann hypothesis",
 ]
 
 [project.optional-dependencies]
 dev = [
     "build",
     "pytest",
-    "pytest-cov"
+    "pytest-cov",
 ]
 
 [project.urls] # TEMPORARY as project will eventually find a permanent location.
