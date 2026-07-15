@@ -110,15 +110,11 @@ The library follows several core principles:
 
 ## Installation
 
-Clone the repository:
+Clone the repository and install locally:
 
 ```bash
-git clone <repository-url>
-```
-
-Install locally:
-
-```bash
+git clone https://github.com/salma-rodriguez/openoperatorlab.git
+cd openoperatorlab
 pip install -e .
 ```
 
@@ -129,7 +125,7 @@ pip install -e .
 Run the complete test suite with:
 
 ```bash
-pytest
+python -m pytest
 ```
 
 At the initial public release, the library includes a comprehensive modular unit test suite covering every implemented 
@@ -155,6 +151,7 @@ Current release:
 
 ```
 v0.1.1
+tested under Windows 11
 ```
 
 v0.1.0 version establishes the foundational architecture of the project and provides the initial implementation of the 
