@@ -2,6 +2,7 @@
 Stochastic operator constructions and analysis tools for OperatorLab.
 """
 
+from .generators import MarkovGenerator
 from .markov import MarkovOperator
 from .operators import (
     StochasticConvention,
@@ -9,6 +10,7 @@ from .operators import (
 )
 
 __all__ = [
+    "MarkovGenerator",
     "MarkovOperator",
     "StochasticConvention",
     "StochasticOperator",
