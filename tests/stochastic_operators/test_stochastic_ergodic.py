@@ -533,7 +533,7 @@ def test_self_loop_makes_irreducible_chain_aperiodic():
     assert analyzer.is_aperiodic()
 
 
-def test_irreducible_chain_with_mixed_cycle_lengths_is_aperiodic():
+def test_irreducible_chain_with_only_even_cycles_has_period_two():
     analyzer = ErgodicAnalyzer(
         MarkovOperator([
             [0.0, 0.5, 0.5],
