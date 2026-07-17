@@ -8,10 +8,12 @@ from .operators import (
     StochasticConvention,
     StochasticOperator,
 )
+from .stationary import StationaryAnalyzer
 
 __all__ = [
     "MarkovGenerator",
     "MarkovOperator",
+    "StochasticAnalyzer",
     "StochasticConvention",
     "StochasticOperator",
 ]
