@@ -7,7 +7,9 @@ from .generators import MarkovGenerator
 from .hitting import HittingAnalyzer
 from .kernels import Kernel, StochasticKernel
 from .markov import MarkovOperator
-from .monte_carlo import MonteCarloResult
+from .monte_carlo import (
+    MonteCarloResult,
+)
 from .operators import (
     StochasticConvention,
     StochasticOperator,
