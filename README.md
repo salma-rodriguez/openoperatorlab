@@ -1,13 +1,17 @@
-# Open-OperatorLab
+# Open Laboratory of Advanced Spaces, Systems and Operators (O-LASSO)
 
-*A modular Python framework for operator theory, numerical linear algebra, and scientific computing, written with the
-vision of creating an ecosystem for operator theory.*
+*Beyond a modular Python framework for operator theory, numerical linear algebra, and scientific computing, written 
+with the vision of creating an ecosystem for operator theory, this "framework" has been expanded to include the entire 
+mathematical stack: from spaces, to fields to functional analytic systems and operators, to assist the scientific 
+community, in bona fide, to make progress in $RH$ as well as other analysis problems of interest. This library is 
+released exclusively as a gesture of goodwill, although the author reserves copyright over the research manuscripts 
+that inspired this major work.
 
 ---
 
 ## Overview
 
-**OperatorLab** is an open-source Python library providing a modular framework for constructing, analyzing, and 
+**O-LASSO** is an open-source Python library providing a modular framework for constructing, analyzing, and 
 experimenting with many types of operators. Currently the library includes a **Spectral Operators** subpackage. Future 
 operators are highlighted under **Future Directions**.
 
@@ -57,7 +61,7 @@ Current capabilities include:
 ## Package Structure
 
 ```
-OpenOperatorLab / OperatorLab
+O-LASSO # thus far
 │
 ├── operator_core/
 │   ├── __init__.py
@@ -81,12 +85,32 @@ OpenOperatorLab / OperatorLab
 │   ├── constants.py
 │   └── io.py
 │
+├── stochastic_operators/
+│   ├── __init__.py
+│   ├── operators.py
+│   ├── markov.py
+│   ├── generators.py
+│   ├── stationary.py
+│   ├── ergodic.py
+│   ├── hitting.py
+│   └── kernels.py
+│
+└────── monte_carlo/
+│       ├── __init__.py
+│       ├── result.py
+│       ├── simulation.py
+│       ├── empirical.py
+│       └── statistics.py
+│
 ├── tests/
 │   ├── operator_core/
 │   └── spectral_operators/
-│
+│   └── stochastic_operators/
+|
+├── benchmarks/
 ├── docs/
 ├── examples/
+├── experiments/
 ├── README.md
 ├── CHANGELOG.md
 ├── LICENSE
@@ -159,6 +183,8 @@ core spectral operator framework.
 
 v0.1.1 performs some updates to the **core** library, including *shims* for compatibility with new layout (refer to 
 package structure above).
+
+v0.1.2 future-a finished level one (1) product (the *Abstract Mathematics* portion of the work).
 
 ---
 
